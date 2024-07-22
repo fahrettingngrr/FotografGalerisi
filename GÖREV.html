@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .col-4:hover {
+            width: 100%;
+        }
+
+        .container-fluid {
+            width: 100%;
+            height: 100px;
+            background-image: url('https://st2.depositphotos.com/1845763/9565/i/950/depositphotos_95657490-stock-photo-moscow-streets-in-sunset.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+           
+        }
+
+      
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-1 text-danger " style="font-family:'Bernard MT'" href="#"> 🎬 Fotograf Galerisi</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
+                  
+                    <li class="nav-item d-flex mx-5 ">
+                        <h3 class="mx-4 text-info"  style="font-family:'Bernard MT'">Galeri İçerik</h3>
+                        <select class="rounded" id="selectOption" onchange="showFields(this)">
+                            <option value="0">Kategori Seçiniz</option>
+                            <option value="1">Araba</option>
+                            <option value="2">Meyve</option>
+                            <option value="3">Manzara</option>
+                            <option value="4">Tüm Galeri</option>
+                        </select>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" oninput="filterContent()">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Araba" aria-label="Search">
+
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+
+    <div id="araba" class="container text-center hidden">
+        <h1 class="border border-solid rounded bg-primary-subtle">Araba</h1>
+        <div class="row gy-5">
+            <div class="col-6">
+                <a href="https://arabam-blog.mncdn.com/wp-content/uploads/2022/12/best-luxury-car-brands-bugatti-2022-luxe-digital.jpg">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://arabam-blog.mncdn.com/wp-content/uploads/2022/12/best-luxury-car-brands-bugatti-2022-luxe-digital.jpg" alt="Araba1">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://arabam-blog.mncdn.com/wp-content/uploads/2021/10/Aventador_6675860749-1.jpg">
+                    <div class="col-4 mx-auto p-2">
+                        <img class="w-100" src="https://arabam-blog.mncdn.com/wp-content/uploads/2021/10/Aventador_6675860749-1.jpg" alt="Araba2">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://www.webtekno.com/images/editor/default/0002/50/fe81bcdc293a9f4866559721bb79352ca818cb5d.jpeg">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://www.webtekno.com/images/editor/default/0002/50/fe81bcdc293a9f4866559721bb79352ca818cb5d.jpeg" alt="Araba3">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://img.paratic.com/dosya/2015/03/en-pahali-lamborghini-modelleri.jpg">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://img.paratic.com/dosya/2015/03/en-pahali-lamborghini-modelleri.jpg" alt="Araba4">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div id="manzara" class="container text-center hidden">
+        <h1 class="border border-solid rounded bg-secondary-subtle">MANZARA</h1>
+        <div class="row gy-5">
+            <div class="col-6">
+                <a href="https://i0.wp.com/mediatrend.mediamarkt.com.tr/wp-content/uploads/2017/02/2017_subat_03.jpg?ssl=1">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://i0.wp.com/mediatrend.mediamarkt.com.tr/wp-content/uploads/2017/02/2017_subat_03.jpg?ssl=1" alt="Manzara1">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://binlercepresets.shop/wp-content/uploads/2023/11/cappadocia-landscape-turkey_984745-6.jpg">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://binlercepresets.shop/wp-content/uploads/2023/11/cappadocia-landscape-turkey_984745-6.jpg" alt="Manzara2">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://www.arthenos.com/wp-content/uploads/2023/03/Manzara_fotografciligi_17.webp">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://www.arthenos.com/wp-content/uploads/2023/03/Manzara_fotografciligi_17.webp" alt="Manzara3">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://www.technopat.net/sosyal/eklenti/20200815_152613-jpg.1505135/">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://www.technopat.net/sosyal/eklenti/20200815_152613-jpg.1505135/" alt="Manzara4">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div id="meyve" class="container text-center hidden">
+        <h1 class="border border-solid rounded bg-success-subtle">MEYVE</h1>
+        <div class="row gy-5">
+            <div class="col-6">
+                <a href="https://www.anadoluetap.com/CMSFiles/Image/Content/636971028311290000.png" class="content-item" data-category="meyve">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://www.anadoluetap.com/CMSFiles/Image/Content/636971028311290000.png" alt="Meyve1">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://www.anadoluetap.com/CMSFiles/Image/Content/636971028311290000.png">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://www.anadoluetap.com/CMSFiles/Image/Content/636971028311290000.png" alt="Meyve2">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://galerey-room.ru/images/205008_1383933008.png">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://galerey-room.ru/images/205008_1383933008.png" alt="Meyve3">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://png.pngtree.com/png-clipart/20230425/original/pngtree-fruit-strawberry-red-fresh-png-image_9096589.png">
+                    <div class="col-4 rounded mx-auto p-2">
+                        <img class="w-100" src="https://png.pngtree.com/png-clipart/20230425/original/pngtree-fruit-strawberry-red-fresh-png-image_9096589.png" alt="Meyve4">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="uyarı" class="container text-center hidden">
+        <h1 class="border border-solid rounded bg-danger">Arama uygun fotoğraf bulunamadı !!!</h1>
+    </div>
+
+    <!-- Kategoriler için örnek içerikler -->
+    <div id="araba" class="hidden">Araba İçeriği</div>
+    <div id="meyve" class="hidden">Meyve İçeriği</div>
+    <div id="manzara" class="hidden">Manzara İçeriği</div>
+
+    <script>
+        function showFields(selection) {
+            document.getElementById("araba").classList.add("hidden");
+            document.getElementById("manzara").classList.add("hidden");
+            document.getElementById("meyve").classList.add("hidden");
+            document.getElementById("uyarı").classList.add("hidden");
+
+            if (selection.value == "1") {
+                document.getElementById("araba").classList.remove("hidden");
+            } else if (selection.value == "2") {
+                document.getElementById("meyve").classList.remove("hidden");
+            } else if (selection.value == "3") {
+                document.getElementById("manzara").classList.remove("hidden");
+            } else if (selection.value == "4") {
+                document.getElementById("araba").classList.remove("hidden");
+                document.getElementById("manzara").classList.remove("hidden");
+                document.getElementById("meyve").classList.remove("hidden");
+            }
+        }
+
+        function filterContent() {
+            var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+            var categories = {
+                araba: document.getElementById("araba"),
+                meyve: document.getElementById("meyve"),
+                manzara: document.getElementById("manzara")
+            };
+
+            var isFound = false;
+
+            // İlk önce tüm kategorileri gizle
+            Object.values(categories).forEach(function (category) {
+                category.classList.add("hidden");
+            });
+
+            if (searchTerm) {
+                // Arama terimi varsa, ilgili kategoriye göre içerikleri göster
+                for (var category in categories) {
+                    if (searchTerm === category) {
+                        categories[category].classList.remove("hidden");
+                        isFound = true;
+                    }
+                }
+            }
+
+            if (!isFound) {
+                // Arama terimi bulunamadıysa uyarı mesajını göster
+                document.getElementById("uyarı").classList.remove("hidden");
+            } else {
+                // Arama terimi bulunduysa uyarı mesajını gizle
+                document.getElementById("uyarı").classList.add("hidden");
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
