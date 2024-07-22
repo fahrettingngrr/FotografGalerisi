@@ -32,7 +32,7 @@
 
                     <li class="nav-item d-flex mx-5 ">
                         <h3 class="mx-4 text-info" style=" text-shadow: 3px 2px 1px #000; font-family:'Bernard MT'">Galeri İçerik</h3>
-                        <select class="rounded" id="selectOption" onchange="showFields(this)">
+                        <select class="rounded border border-warning" id="selectOption" onchange="showFields(this)">
                             <option value="0">Kategori Seçiniz</option>
                             <option value="1">Araba</option>
                             <option value="2">Meyve</option>
@@ -195,6 +195,7 @@
             // İlk önce tüm kategorileri gizle
             Object.values(categories).forEach(function (category) {
                 category.classList.add("hidden");
+
             });
 
             if (searchTerm) {
@@ -202,9 +203,10 @@
                 for (var category in categories) {
                     if (searchTerm === category) {
                         categories[category].classList.remove("hidden");
+
                         isFound = true;
                     }
-                }
+                } document.getElementById("uyarı").classList.add("hidden");
             }
 
             if (!isFound) {
